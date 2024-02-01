@@ -1,20 +1,24 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
 import Route from './routing/Route';
-
 export default function App() {
   return (
     <>
-       <Route/>
+
+       <View style={styles.container}>
+         <Route/>
+       </View>
+
     </>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
+    
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    paddingHorizontal: 20,
+    paddingVertical: 100,    
+
   },
 });
