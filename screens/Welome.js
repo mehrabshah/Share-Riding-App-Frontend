@@ -1,34 +1,39 @@
 import React from "react";
-import {
-  StyleSheet,
-  Text,
-  SafeAreaView,
-  ScrollView,
-  Image,
-  View,
-} from "react-native";
+import { StyleSheet, Text, Image, View } from "react-native";
 import Button from "../components/Button";
+import Signup from "./Signup";
 
-const Welome = () => {
+const Welome = ({ navigation }) => {
+  const Signup = () => {
+    navigation.navigate("Signup");
+  };
+  const Login = () => {
+    navigation.navigate("Login");
+  };
+
   return (
-    <SafeAreaView>
-      <ScrollView>
-        <View style={styles.container}>
-          <Image source={require("../assets/Images/Welcome.png")} />
-          <Text style={styles.headingText}>Welcome</Text>
-          <Text style={styles.Paragraph}>Have a better meeting experience</Text>
-        </View>
-        <View style={styles.buttonContainer}>
-          <Button
-            title="Create an account"
-            backgroundColor="#008955"
-            textColor="#FFFFFF"
-            borderColor="#008955"
-          />
-          <Button title="Log In" borderColor="#008955" textColor="#008955" />
-        </View>
-      </ScrollView>
-    </SafeAreaView>
+    <>
+      <View style={styles.container}>
+        <Image source={require("../assets/Images/Welcome.png")} />
+        <Text style={styles.headingText}>Welcome</Text>
+        <Text style={styles.Paragraph}>Have a better meeting experience</Text>
+      </View>
+      <View style={styles.buttonContainer}>
+        <Button
+          title="Create an account"
+          backgroundColor="#008955"
+          textColor="#FFFFFF"
+          borderColor="#008955"
+          onPress={Signup}
+        />
+        <Button
+          title="Log In"
+          borderColor="#008955"
+          textColor="#008955"
+          onPress={Login}
+        />
+      </View>
+    </>
   );
 };
 export default Welome;
@@ -50,6 +55,8 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
   buttonContainer: {
-    marginTop: 200,
+    marginTop: 190,
+    marginBottom: 20,
+    paddingHorizontal: 20,
   },
 });
