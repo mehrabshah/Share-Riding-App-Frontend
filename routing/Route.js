@@ -18,7 +18,13 @@ const Route = () => {
               headerShown: false,
             }}
           />
-          <Stack.Screen name="Login" component={Login} />
+          <Stack.Screen name="Login" component={Login} 
+            options={{
+              headerTitle: "",
+              headerShadowVisible: false,
+              headerTransparent: true, 
+               
+            }}/>
           <Stack.Screen name="Signup" component={Signup} />
         </Stack.Navigator>
       </NavigationContainer>

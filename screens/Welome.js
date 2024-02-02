@@ -1,7 +1,8 @@
 import React from "react";
 import { StyleSheet, Text, Image, View } from "react-native";
-import Button from "../components/Button";
+
 import Signup from "./Signup";
+import Button from "../components/shared/Button";
 
 const Welome = ({ navigation }) => {
   const Signup = () => {
